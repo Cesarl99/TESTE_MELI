@@ -1,4 +1,4 @@
-import java.util.Scanner; // importa a classe Scanner
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,42 +6,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Digite o primeiro numero: ");
-        int numero1 = scanner.nextInt();
+        int numero = scanner.nextInt();
 
-
-        System.out.print("Digite o segundo numero: ");
-        int numero2 = scanner.nextInt();
-
-        System.out.print("Qual a operação será realizada:");
-        String sinalOperacao =  scanner.next();
-
-        int resultado;
-
-        // Verifica qual o operacao sera realizada usando como parametros os dois valores dado pelo usuarios
-        switch(sinalOperacao) {
-            case "+":
-                System.out.println("SOMA ESCOLHIDA");
-                resultado = numero1 + numero2;
-                System.out.println("RESULTADO DA SOMA É " + resultado);
-                break;
-            case "-":
-                System.out.println("SUBTRAÇÃO ESCOLHIDA");
-                resultado = numero1 - numero2;
-                System.out.println("RESULTADO DA SUBTRAÇÃO É " + resultado);
-                break;
-            case "*":
-                System.out.println("MULTIPLICAÇÃO ESCOLHIDA");
-                resultado = numero1 * numero2;
-                System.out.println("RESULTADO DA MULTIPLICAÇÃO É " + resultado);
-                break;
-            case "/":
-                System.out.println("DIVISÃO ESCOLHIDA");
-                double resultadofloat = numero1 / numero2;
-                System.out.println("RESULTADO DA DIVISÃO É " + resultadofloat);
-                break;
-            default:
-                System.out.println("NENHUMA OPERACAO VALIDA SELECIONADA");
+        // Identifica se o numero é par ou impar
+        if (numero%2 == 0){
+            System.out.println("O numero "+ numero + " é par");
+        }else {
+            System.out.println("O numero "+ numero + " é impar");
         }
-        scanner.close(); // opcional, mas boa prática
+
+        scanner.close();
     }
 }
