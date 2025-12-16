@@ -27,7 +27,7 @@ public class Main {
         }
         scanner.close();
 
-        // TRATAMENTO PARA PESSOAS COM MENSO DE 30 ANOS
+        // TRATAMENTO PARA PESSOAS COM MENOS DE 30 ANOS
         Set<String> nomesMais30 = new HashSet<>();
 
         for (String nomeMap : pessoas.keySet()) {
